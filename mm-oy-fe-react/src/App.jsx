@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import './i18n'; // Import the i18n configuration
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <div data-bs-theme={theme === "light" ? "light" : "dark"}>
-        <Header setTheme={setTheme} them={theme}/>
+        <Header setTheme={setTheme} theme={theme} />
         <MainPage />
         <SecondPage />
         <Review />
