@@ -1,0 +1,11 @@
+.company-logo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  @media (max-width: 990px) {
+    .company-logo {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }

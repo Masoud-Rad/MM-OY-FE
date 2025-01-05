@@ -2,7 +2,7 @@ import React from 'react'
 
 const SecondPage = () => {
   return (
-    <div class="alert alert-danger" >SecondPage</div>
+    <div className="alert alert-danger" >SecondPage</div>
   )
 }
 

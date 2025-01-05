@@ -1,32 +1,58 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoMenu } from "react-icons/io5";
+import '../styles.css';
 
 export const Header = () => {
-  return (<>
+
+
   
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  const [companyName, setCompanyName] = React.useState("");
+  const [logoUrl,setlogoUrl] = React.useState("");
+  const [isCollapsed, setIsCollapsed] = React.useState(true);
+
+
+  const fetchCompanyData = async () => {  
+      try {
+          const response = await fetch('https://mm-oy.onrender.com/api/companyDetails');
+          const data = await response.json(); 
+          setCompanyName(data.companyDetails[0].company_name);
+          setlogoUrl(data.companyDetails[0].logo_url);
+      } catch (error) {
+          console.error('Error fetching company info:',error);
+      }
+    }
+      useEffect(() => {
+        fetchCompanyData();
+      }, []);
+
+      const toggleCollapse = () => {
+        setIsCollapsed(!isCollapsed);
+      };
+
+  return (<>
+
+  <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
     
-    <button type="button" class="btn">
-    <IoMenu />
+    <button type="button" className="btn" onClick={toggleCollapse}>
+    <IoMenu size={30}/>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <div className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`} id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li className="nav-item">
+          <a className="nav-link" href="/About">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+        <li className="nav-item">
+          <a className="nav-link" href="/Contact">Contact</a>
         </li>
         
       </ul>
-      <div class="d-flex">
-        <img src="https://via.placeholder.com/150" alt="logo" />
-      </div>
-      
+    </div>
+    <div className="d-flex">
+        <img src={logoUrl} alt="company's logo" className='company-logo'/>
     </div>
   </div>
 </nav>
