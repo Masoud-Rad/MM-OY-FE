@@ -12,8 +12,9 @@
 
   .btn-sm-lg {
     font-size: 0.7rem; 
-    width: 35px;
-    height: 35px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,7 @@
   
   @media (min-width: 992px) {
     .btn-sm-lg {
+      padding: 0;
       font-size: 1rem; 
       width: 45px;
       height: 45px;
@@ -31,3 +33,26 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
+
+  body[data-bs-theme="dark"] .card {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  body[data-bs-theme="light"] .card {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .card {
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Ensure the footer sticks to the bottom */
+.footer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
