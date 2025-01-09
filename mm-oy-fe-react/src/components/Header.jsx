@@ -34,8 +34,8 @@ export const Header = ({ setTheme, theme }) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary alert alert-warning">
+        <div className="container-fluid d-flex justify-content-between align-items-center">
           <button type="button" className="btn" onClick={toggleCollapse}>
             <IoMenu size={30} />
           </button>
@@ -52,13 +52,13 @@ export const Header = ({ setTheme, theme }) => {
               </li>
             </ul>
           </div>
+          <div className="d-flex justify-content-center align-items-center flex-shrink-0 logo-container">
+  <img src={logoUrl} alt="company's logo" className="company-logo" />
+</div>
           <div className="d-flex align-items-center" style={{ marginRight: '5px', marginLeft: '10px' }}>
             <button type="button" className="btn btn-info btn-lg btn-sm-lg" onClick={handleThemeChange}>
               {theme === 'light' ? <MdOutlineDarkMode size={30} /> : <MdOutlineLightMode size={30} />}
             </button>
-          </div>
-          <div className="d-flex">
-            <img src={logoUrl} alt="company's logo" className="company-logo" />
           </div>
         </div>
       </nav>

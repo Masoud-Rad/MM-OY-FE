@@ -56,3 +56,32 @@
   text-align: center;
   width: 100%;
 }
+
+/* //-------------------- */
+
+.logo-container {
+  flex: 0 0 auto; /* Prevent the logo container from growing */
+}
+
+.company-logo {
+  max-width: 150px; /* Adjust the logo size as needed */
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 990px) {
+  .navbar {
+    justify-content: center; /* Center the navbar contents */
+  }
+  .logo-container {
+    position: absolute; /* Place logo in the center of the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
