@@ -85,3 +85,41 @@
   }
 }
 
+/* Custom title styles */
+
+.custom-title1 {
+  font-size: 1.5rem; /* Default size */
+  font-weight: bold; /* Default weight */
+}
+
+@media (max-width: 992px) {
+  .custom-title1 {
+    font-size: 1rem; /* Smaller size for small screens */
+    font-weight: normal; /* Normal weight for small screens */
+  }
+}
+
+.custom-title2 {
+  font-size: 2.5rem; /* Default size */
+  font-weight: bold; /* Default weight */
+}
+
+@media (max-width: 767.98px) {
+  .custom-title2 {
+    font-size: 1.5rem; /* Smaller size for small screens */
+    font-weight: normal; /* Normal weight for small screens */
+  }
+}
+
+/* Custom subtitle styles */
+.custom-subtitle {
+  font-size: 1.5rem; /* Default size */
+  font-weight: bold; /* Default weight */
+}
+
+@media (max-width: 992px) {
+  .custom-subtitle {
+    font-size: 1rem; /* Smaller size for small screens */
+    font-weight: light; /* Light weight for small screens */
+  }
+}
