@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles.css";
 
-// filepath: /Users/mas/MM-OY-FE-1/mm-oy-fe-react/src/components/MainPage.jsx
+
 const MainPage = () => {
   const [title1, setTitle1] = useState("");
   const [title2, setTitle2] = useState("");

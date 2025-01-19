@@ -123,3 +123,22 @@
     font-weight: light; /* Light weight for small screens */
   }
 }
+
+
+/* Custom styles for the image */
+.custom-image {
+  height: 10cm;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .custom-image {
+    height: 5cm; /* Adjust as needed for small screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .custom-image {
+    height: 7cm; /* Adjust as needed for medium screens */
+  }
+}
