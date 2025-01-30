@@ -26,7 +26,7 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div className="container my-5 alert alert-warning">
+    <div className="container my-5 ">
       <div className="row mb-2">
         <div className="col-md-5 mb-2 mb-md-0">
           <img src={main_url} className="img-fluid" alt="Main" />

@@ -45,7 +45,7 @@ export const Header = ({ setTheme, theme }) => {
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/About">Our-Values</a>
+                <a className="nav-link" href="/Values">Our-Values</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/About">About</a>

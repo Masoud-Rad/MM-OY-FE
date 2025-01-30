@@ -11,6 +11,7 @@ import MainPage from "./components/MainPage";
 import Review from "./components/Review";
 import SecondPage from "./components/SecondPage";
 import Home from "./components/Home";
+import Values from "./components/Values";
 
 function App() {
   const [theme, setTheme] = React.useState("light");
@@ -28,6 +29,7 @@ function App() {
               <Route path="/mainPage" element={<MainPage />} />
               <Route path="/review" element={<Review />} />
               <Route path="/secondPage" element={<SecondPage />} />
+              <Route path="/Values" element={<Values />} />
             </Routes>
           </BrowserRouter>
         </div>
@@ -38,3 +40,4 @@ function App() {
 }
 
 export default App;
+

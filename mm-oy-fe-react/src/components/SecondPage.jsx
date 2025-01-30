@@ -31,8 +31,8 @@ const SecondPage = () => {
   }, []);
 
   return (
-    <div className="container my-5 alert alert-danger">
-      {error && <div className="alert alert-danger">{error}</div>}
+    <div className="container my-5 ">
+     
       <div className="row">
         <div className="col-12">
           <h1 className="text-center mb-4">{title}</h1>
